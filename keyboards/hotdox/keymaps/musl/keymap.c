@@ -1,9 +1,6 @@
 /* vim: set sw=2 ts=2 : */
 
 #include QMK_KEYBOARD_H
-#include "config.h"
-#include <inttypes.h>
-#include <avr/progmem.h>
 
 // Row counts.
 // 7 7 7 6 5 6
@@ -16,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_SCLN,  KC_Q,     KC_J,     KC_K,    KC_X,     LCTL_T(KC_ENT),
 			KC_CAPS,  KC_LEFT,  KC_DOWN,  KC_UP,   KC_RGHT,
 			
-			LALT_T(KC_PGUP), KC_NO, KC_NO, LGUI_T(KC_SPC), MO(1), KC_NO,
+			LALT_T(KC_PGUP), KC_NO, KC_NO, KC_NO, MO(1), LGUI_T(KC_SPC),
 
 			KC_END,          KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_EQL,
 			KC_DEL,          KC_F,     KC_G,     KC_C,     KC_R,     KC_L,     KC_BSLS,
@@ -75,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_ENT,   KC_N,     KC_M,   KC_COMM,  KC_DOT,   KC_SLSH,  KC_RCTL,
 			KC_LEFT,  KC_DOWN,  KC_UP,  KC_RGHT,  KC_MINS,
 			
-			KC_NO, LALT_T(KC_PGDN), KC_NO, KC_HYPR, TO(0), RGUI_T(KC_SPC)
+			KC_NO, LALT_T(KC_PGDN), KC_NO, RGUI_T(KC_SPC), TO(0), KC_HYPR
 			),
 	[4] = LAYOUT_ergodox(
 			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,    KC_TRNS,

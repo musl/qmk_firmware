@@ -30,6 +30,10 @@
 #define TAPPING_TERM 200
 //#define TAPPING_TOGGLE 2
 
+#undef MOUSEKEY_DELAY
+#undef MOUSEKEY_MAX_SPEED
+#undef MOUSEKEY_TIME_TO_MAX
+
 #define MOUSEKEY_DELAY             20
 #define MOUSEKEY_INTERVAL          20
 #define MOUSEKEY_MAX_SPEED         10
