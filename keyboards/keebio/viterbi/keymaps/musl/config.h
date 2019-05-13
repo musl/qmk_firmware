@@ -78,11 +78,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // LED Configuration
 /******************************************************************************/
 
-#undef RGB_DI_PIN
-#define RGB_DI_PIN D3
-
 #undef RGBLED_NUM
-#define RGBLED_NUM 2
+#define RGBLED_NUM 6
 
 #define RGBLIGHT_ANIMATIONS
 #define RGBLIGHT_HUE_STEP 16
