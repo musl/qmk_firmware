@@ -78,14 +78,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // LED Configuration
 /******************************************************************************/
 
-#undef RGBLED_NUM
-#define RGBLED_NUM 6
+#undef  RGBLED_NUM
+#define RGBLED_NUM 2
+#define RGBLED_SPLIT {1, 1}
 
-#define RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_HUE_STEP 16
-#define RGBLIGHT_SAT_STEP 16
-#define RGBLIGHT_VAL_STEP 16
+// Don't turn off lights when the host goes to sleep.
+#undef RGBLIGHT_SLEEP
+
+#define RGBLIGHT_HUE_STEP 8
+#define RGBLIGHT_SAT_STEP 8
+#define RGBLIGHT_VAL_STEP 8
+
+// Selectively enable animations to save on code size.
+#undef  RGBLIGHT_ANIMATIONS
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 
 /******************************************************************************/
-
 #endif
