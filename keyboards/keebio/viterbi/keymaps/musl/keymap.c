@@ -39,11 +39,11 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
 	 * Left Momentary Layer: F-Keys
 	 */
 	[LAYER_LEFT] = LAYOUT( \
-			xxxx,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   xxxx,            TO(LAYER_SYSTEM),  ____,  ____,  ____,  ____,     ____,     RGB_TOG,  \
-			xxxx,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  xxxx,            ____,              ____,  ____,  ____,  ____,     ____,     BL_MODE,  \
-			xxxx,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  xxxx,            ____,              ____,  ____,  ____,  RGB_HUI,  RGB_SAI,  RGB_VAI,  \
-			xxxx,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  xxxx,            ____,              ____,  ____,  ____,  RGB_HUD,  RGB_SAD,  RGB_VAD,  \
-			xxxx,  KC_F21,  KC_F22,  KC_F23,  KC_F24,  ____,    TO(LAYER_PADS),  ____,              ____,  ____,  ____,  ____,     ____,     ____ \
+			xxxx,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   xxxx,            TO(LAYER_SYSTEM),  ____,  ____,  ____,  ____,     ____,      RGB_TOG,  \
+			xxxx,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  xxxx,            ____,              ____,  ____,  ____,  ____,     RGB_RMOD,  RGB_MOD,  \
+			xxxx,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  xxxx,            ____,              ____,  ____,  ____,  RGB_HUI,  RGB_SAI,   RGB_VAI,  \
+			xxxx,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  xxxx,            ____,              ____,  ____,  ____,  RGB_HUD,  RGB_SAD,   RGB_VAD,  \
+			xxxx,  KC_F21,  KC_F22,  KC_F23,  KC_F24,  ____,    TO(LAYER_PADS),  ____,              ____,  ____,  ____,  ____,     ____,      ____ \
 			),
 
 	/*
@@ -82,47 +82,30 @@ const uint16_t PROGMEM keymaps[LAYER_COUNT][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	
-	// Store a custom RGB light mode because I want to cycle through a
-	// smaller list of modes.
-	static uint8_t mode = 1;
-
+	// Note: return true to continue processing the key, false to skip
+	// further processing.
 	switch (keycode) {
 		case DBL_ZERO:
 			if (!record->event.pressed) {
 				SEND_STRING("00");
-			}
-			break;
-		case BL_MODE:
-			if (record->event.pressed) {
-				switch(mode) {
-					case 1:
-						mode = 8;
-						break;
-					case 8:
-						mode = 14;
-						break;
-					default:
-						mode = 1;
-						break;
-				}
-				rgblight_mode(mode);
+				return false;
 			}
 			break;
 	}
-
 	return true;
 }	
 
 void blink(uint8_t times, uint8_t mode, uint8_t r, uint8_t g, uint8_t b) { 
 	rgblight_mode_noeeprom(0);
 	rgblight_setrgb(0, 0, 0);
+
 	for(uint8_t i = times; --i > 0;) {
 		rgblight_setrgb(r, g, b);
 		_delay_ms(100);
 		rgblight_setrgb(0, 0, 0);
 		_delay_ms(100);
 	}
+
 	rgblight_mode_noeeprom(mode);
 }
 
