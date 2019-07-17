@@ -31,14 +31,14 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-		KC_MS_BTN1, TO(1), KC_MS_BTN2,	
-        RGB_TOG,        HYPR(KC_UP),    RGB_MOD,
-        HYPR(KC_LEFT),  HYPR(KC_DOWN),  HYPR(KC_RGHT)
+		KC_MS_BTN1,  TO(1),    KC_MS_BTN2,
+        RGB_TOG,     MACRO_0,  RGB_MOD,
+        MACRO_1,     MACRO_2,  MACRO_3
     ),
     [1] = LAYOUT(
-		KC_MS_BTN1, TO(0), KC_MS_BTN2,	
-        _______,  MACRO_0,  _______,
-		MACRO_1,  MACRO_2,  MACRO_3
+		KC_MS_BTN1,  TO(0),    KC_MS_BTN2,
+        _______,     MACRO_0,  _______,
+		MACRO_1,     MACRO_2,  MACRO_3
     ),
 };
 
