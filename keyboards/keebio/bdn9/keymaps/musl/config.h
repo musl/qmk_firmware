@@ -23,11 +23,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PREVENT_STUCK_MODIFIERS
 #define TAPPING_TERM 200
 
+#define ENCODER_RESOLUTION 1
+
+/*
 #undef MOUSEKEY_DELAY
 #undef MOUSEKEY_MAX_SPEED
 #undef MOUSEKEY_TIME_TO_MAX
 
-/*
 #define MK_3_SPEED
 #undef MK_MOMENTARY_ACCEL
 #define MK_C_OFFSET_0 8

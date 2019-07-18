@@ -44,8 +44,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 static float vx = 0;
 static float vy = 0;
-static float vstep = 4.0;
-static float vdecay = 0.95;
+static float vstep = 0.5;
+static float vdecay = 0.90;
 
 void matrix_scan_user() {
 	static report_mouse_t report;
@@ -67,9 +67,9 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         }
     } else if (index == 1) {
         if (clockwise) {
-			vy += vstep;
-        } else {
 			vy -= vstep;
+        } else {
+			vy += vstep;
         }
     }
 }
@@ -98,25 +98,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch(keycode) {
 		case MACRO_0:
 			if(record->event.pressed) {
-				SEND_STRING(SS_LGUI("a") SS_TAP(X_DELETE));
+				SEND_STRING(SS_LGUI("a"));
+				SEND_STRING(SS_TAP(X_DELETE));
 				return true;
 			}
 			break;
 		case MACRO_1:
 			if(record->event.pressed) {
-				vstep = 4.0;
+				vstep = 0.5;
 				return true;
 			}
 			break;
 		case MACRO_2:
 			if(record->event.pressed) {
-				vstep = 8.0;
+				vstep = 1.0;
 				return true;
 			}
 			break;
 		case MACRO_3:
 			if(record->event.pressed) {
-				vstep = 16.0;
+				vstep = 2.0;
 				return true;
 			}
 			break;
