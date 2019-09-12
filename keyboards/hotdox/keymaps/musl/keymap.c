@@ -3,119 +3,126 @@
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+	// Main Layer
 	[0] = LAYOUT_ergodox(
-			KC_GRV,   KC_1,     KC_2,     KC_3,    KC_4,     KC_5,            KC_HOME,
-			KC_TAB,   KC_QUOT,  KC_COMM,  KC_DOT,  KC_P,     KC_Y,            KC_BSPC,
-			KC_ESC,   KC_A,     KC_O,     KC_E,    KC_U,     KC_I,            KC_LSFT,
-			KC_SCLN,  KC_Q,     KC_J,     KC_K,    KC_X,     LCTL_T(KC_ENT),
-			KC_CAPS,  KC_LEFT,  KC_DOWN,  KC_UP,   KC_RGHT,
+			KC_GRV,   KC_1,     KC_2,     KC_3,         KC_4,         KC_5,              KC_HOME,
+			KC_TAB,   KC_QUOT,  KC_COMM,  KC_DOT,       KC_P,         KC_Y,              KC_BSPC,
+			KC_ESC,   KC_A,     KC_O,     LT(1, KC_E),  LT(3, KC_U),  KC_I,              KC_LSFT,
+			KC_SCLN,  KC_Q,     KC_J,     KC_K,         KC_X,         LCTL_T(KC_ENTER),
+			KC_CAPS,  KC_NO,    KC_NO,    KC_LALT,      KC_LCTL,
 			
-			LALT_T(KC_PGUP), KC_NO,
-			KC_NO,
-			LGUI_T(KC_SPC), MO(1), // Thumbs
-			KC_HYPR,
+			LALT_T(KC_PGUP), // top-left
+			KC_NO, // top-right
+			KC_NO, // mid
+			LGUI_T(KC_SPC), KC_HYPR, // Thumbs
+			LCTL(KC_A), // bottom
 
-			KC_END,          KC_6,   KC_7,     KC_8,     KC_9,     KC_0,     KC_EQL,
-			KC_DEL,          KC_F,   KC_G,     KC_C,     KC_R,     KC_L,     KC_BSLS,
-			KC_D,            KC_H,   KC_T,     KC_N,     KC_S,     KC_MINS,
-			RCTL_T(KC_ENT),  KC_B,   KC_M,     KC_W,     KC_V,     KC_Z,     KC_RSFT,
-			MO(2),           MO(1),  KC_LBRC,  KC_RBRC,  KC_SLSH,
+			KC_END,            KC_6,         KC_7,     KC_8,     KC_9,     KC_0,     KC_EQL,
+			KC_DEL,            KC_F,         KC_G,     KC_C,     KC_R,     KC_L,     KC_BSLS,
+			KC_D,              LT(2, KC_H),  KC_T,     KC_N,     KC_S,     KC_MINS,
+			RCTL_T(KC_ENTER),  KC_B,         KC_M,     KC_W,     KC_V,     KC_Z,     RSFT_T(KC_SLSH),
+			KC_RCTL,           KC_RALT,      KC_LBRC,  KC_RBRC,  KC_SLSH,
 			
-			KC_NO, RALT_T(KC_PGDN),
-			KC_NO,
-			KC_HYPR,
-			LCTL(KC_A), RGUI_T(KC_SPC)// Thumbs
+			KC_NO, // top-left
+			RALT_T(KC_PGDN), // top-right
+			KC_NO, // mid
+			RCTL(KC_A), // bottom
+			KC_HYPR, RGUI_T(KC_SPC)// Thumbs
 			),
+	// Media, Mouse (Right Hand 1)
 	[1] = LAYOUT_ergodox(
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  TO(4),
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
 			
-			KC_NO, KC_NO,
-			KC_NO,
-			KC_NO, KC_TRNS, // Thumbs
-			KC_HYPR,
+			KC_TRNS, KC_TRNS,
+			KC_TRNS,
+			KC_TRNS, KC_TRNS, // Thumbs
+			KC_TRNS,
 			
-			KC_NO,  KC_NO,    KC_NO,    KC_WH_U,  KC_NO,    KC_NO,    KC_NO,
-			KC_NO,  KC_VOLU,  KC_WH_L,  KC_MS_U,  KC_WH_R,  KC_NO,
-			KC_NO,  KC_MUTE,  KC_MS_L,  KC_MS_D,  KC_MS_R,  KC_BTN1,  KC_BTN2,
-			KC_NO,  KC_VOLD,  KC_NO,    KC_WH_D,  KC_NO,    KC_BTN3,  KC_BTN4,
-			KC_NO,  KC_NO,    KC_NO,    KC_BTN5,  KC_NO,
-			
-			KC_NO, KC_NO,
-			KC_NO,
-			KC_HYPR,
-			TO(3), RGUI_T(KC_SPC)// Thumbs
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_WH_U,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_VOLU,  KC_WH_L,  KC_MS_U,  KC_WH_R,  KC_TRNS,  KC_TRNS,
+			KC_MUTE,  KC_MS_L,  KC_MS_D,  KC_MS_R,  KC_BTN1,  KC_BTN2,
+			KC_TRNS,  KC_VOLD,  KC_TRNS,  KC_WH_D,  KC_TRNS,  KC_BTN3,  KC_BTN4,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_BTN5,  KC_TRNS,
+
+			KC_TRNS, KC_TRNS,
+			KC_TRNS,
+			KC_TRNS,
+			KC_TRNS, KC_TRNS// Thumbs
 			),
+	// FN Keys (Left Hand 1)
 	[2] = LAYOUT_ergodox(
-			KC_NO,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_NO,
-			KC_NO,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_NO,
-			KC_NO,   KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_NO,
-			KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  KC_NO,
-			KC_NO,   KC_F21,  KC_F22,  KC_F23,  KC_F24,
+			KC_TRNS,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,    KC_TRNS,
+			KC_TRNS,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,   KC_TRNS,
+			KC_TRNS,  KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,   KC_TRNS,
+			KC_F16,   KC_F17,  KC_F18,  KC_F19,  KC_F20,  KC_TRNS,
+			KC_TRNS,  KC_F21,  KC_F22,  KC_F23,  KC_F24,
 			
-			KC_NO, KC_NO,
-			KC_NO,
-			KC_NO, TO(3), // Thumbs 
-			KC_HYPR,
+			KC_TRNS, KC_TRNS,
+			KC_TRNS,
+			KC_TRNS, KC_TRNS, // Thumbs
+			KC_TRNS,
 
-			TO(4),  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  BL_TOGG,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  BL_TOGG,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			
+			KC_TRNS, KC_TRNS,
+			KC_TRNS,
+			KC_TRNS,
+			KC_TRNS, KC_TRNS // Thumbs
+			),
+	// Arrow Keys (Right Hand 2)
+	[3] = LAYOUT_ergodox(
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,
+
+			KC_TRNS, KC_TRNS,
+			KC_TRNS,
+			KC_TRNS, KC_TRNS, // Thumbs
+			KC_TRNS,
+
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_PGUP,   KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_INS,   KC_PAUS,  KC_UP,     KC_PSCR,  KC_TRNS,  KC_TRNS,
+			KC_HOME,  KC_LEFT,  KC_DOWN,  KC_RIGHT,  KC_END,   KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_PGUP,   KC_TRNS,  KC_TRNS,  KC_TRNS,
+			KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,   KC_TRNS,
+
+			KC_TRNS, KC_TRNS,
+			KC_TRNS,
+			KC_TRNS,
+			KC_TRNS, KC_TRNS // Thumbs
+			),
+	// System
+	[4] = LAYOUT_ergodox(
+			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  RESET,
+			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  EEP_RST,
 			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
 			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			
-			KC_NO, KC_NO,
-			KC_NO,
-			KC_HYPR,
-			TO(3), RGUI_T(KC_SPC)// Thumbs
-			),
-	[3] = LAYOUT_ergodox(
-			KC_GESC,  KC_1,   KC_2,   KC_3,   KC_4,   KC_5,    KC_HOME,
-			KC_TAB,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,    KC_BSPC,
-			KC_LSFT,  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,    KC_LCTL,
-			KC_Z,     KC_X,   KC_C,   KC_V,   KC_B,   KC_ENT,
-			KC_LALT,  KC_F1,  KC_F2,  KC_F3,  KC_F4,
-
-			LALT_T(KC_PGUP), KC_NO,
-			KC_NO,
-			LGUI_T(KC_SPC), TO(0), // Thumbs
-			KC_HYPR,
-
-			KC_END,   KC_6,     KC_7,   KC_8,     KC_9,     KC_0,     KC_EQL,
-			KC_DEL,   KC_Y,     KC_U,   KC_I,     KC_O,     KC_P,     KC_BSLS,
-			KC_H,     KC_J,     KC_K,   KC_L,     KC_SCLN,  KC_RSFT,
-			KC_ENT,   KC_N,     KC_M,   KC_COMM,  KC_DOT,   KC_SLSH,  KC_RCTL,
-			KC_LEFT,  KC_DOWN,  KC_UP,  KC_RGHT,  KC_MINS,
-			
-			KC_NO, LALT_T(KC_PGDN),
-			KC_NO,
-			KC_HYPR,
-			TO(0), RGUI_T(KC_SPC)// Thumbs
-			),
-	[4] = LAYOUT_ergodox(
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,    KC_TRNS,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,    RESET,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,    KC_NO,
-			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  EEP_RST,
 			KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
 
 			KC_NO, KC_NO,
 			KC_NO,
-			KC_NO, TO(0), // Thumbs
-			KC_HYPR,
+			TO(0), KC_NO, // Thumbs
+			KC_NO,
 
-			KC_TRNS,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
 			RESET,    KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
-			KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
 			EEP_RST,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
+			KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
+			KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,  KC_NO,
 			KC_NO,    KC_NO,  KC_NO,  KC_NO,  KC_NO,
 
 			KC_NO, KC_NO,
 			KC_NO,
-			KC_HYPR,
-			TO(0), RGUI_T(KC_SPC)// Thumbs
+			KC_NO,
+			KC_NO, TO(0) // Thumbs
 			)
 };
