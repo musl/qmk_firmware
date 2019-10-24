@@ -15,6 +15,7 @@ Make example for this keyboard (after setting up your build environment):
     make handwired/chiron:default
 =======
 Keyboard Maintainer: [Mike Hix](https://github.com/musl/)
+Case: [https://github.com/musl/chiron-keyboard](https://github.com/musl/chiron-keyboard)
 
 Make example for this keyboard (after setting up your build environment):
 
