@@ -65,11 +65,16 @@ SLEEP_LED_ENABLE = yes
 HD44780_ENABLE = no
 LEADER_ENABLE = no
 MIDI_ENABLE = no
-MOUSEKEY_ENABLE = no
+MOUSEKEY_ENABLE = yes
 NKRO_ENABLE = no
+<<<<<<< HEAD
 RGBLIGHT_ENABLE = no
 SLEEP_LED_ENABLE = no
 >>>>>>> Add the Chiron keyboard
+=======
+RGBLIGHT_ENABLE = yes
+SLEEP_LED_ENABLE = yes
+>>>>>>> Clean up rules.mk for the configurator
 TAP_DANCE_ENABLE = no
 UCIS_ENABLE = no
 UNICODEMAP_ENABLE = no
