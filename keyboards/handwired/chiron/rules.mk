@@ -41,10 +41,14 @@ AUTOLOG_ENABLE = no
 BACKLIGHT_ENABLE = no
 BLUETOOTH_ENABLE = no
 <<<<<<< HEAD
+<<<<<<< HEAD
 BOOTMAGIC_ENABLE = no
 =======
 BOOT_MAGIC_ENABLE = no
 >>>>>>> Add the Chiron keyboard
+=======
+BOOTMAGIC_ENABLE = no
+>>>>>>> Update keyboards/handwired/chiron/rules.mk
 COMMAND_ENABLE = no
 CONSOLE_ENABLE = no
 DEBUG_ENABLE = no
