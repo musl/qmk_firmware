@@ -11,6 +11,7 @@ MCU = atmega32u4
 #   QMK DFU      qmk-dfu
 #   ATmega32A    bootloadHID
 #   ATmega328P   USBasp
+<<<<<<< HEAD
 BOOTLOADER = atmel-dfu
 
 # Build Options
@@ -22,6 +23,8 @@ BOOTLOADER = atmel-dfu
 # MCU name
 >>>>>>> Update keyboards/handwired/chiron/rules.mk
 MCU = atmega32u4
+=======
+>>>>>>> Update keyboards/handwired/chiron/rules.mk
 BOOTLOADER = atmel-dfu
 SPLIT_KEYBOARD = yes
 
