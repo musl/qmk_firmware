@@ -23,9 +23,12 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #define PREVENT_STUCK_MODIFIERS
 >>>>>>> Add the Chiron keyboard
+=======
+>>>>>>> Update keyboards/handwired/chiron/keymaps/default/config.h
 
 #define TAPPING_TERM 200
 
