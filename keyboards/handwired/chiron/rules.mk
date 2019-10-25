@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # MCU name
 MCU = atmega32u4
 
@@ -17,6 +18,9 @@ BOOTLOADER = atmel-dfu
 #
 =======
 # Required Items
+=======
+# MCU name
+>>>>>>> Update keyboards/handwired/chiron/rules.mk
 MCU = atmega32u4
 BOOTLOADER = atmel-dfu
 SPLIT_KEYBOARD = yes
