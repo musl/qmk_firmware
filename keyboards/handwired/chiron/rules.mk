@@ -25,8 +25,14 @@ MCU = atmega32u4
 BOOTLOADER = atmel-dfu
 SPLIT_KEYBOARD = yes
 
+<<<<<<< HEAD
 # Stuff to turn off by default
 >>>>>>> Add the Chiron keyboard
+=======
+# Build Options
+#   change yes to no to disable
+#
+>>>>>>> Update keyboards/handwired/chiron/rules.mk
 AUDIO_ENABLE = no
 AUTOLOG_ENABLE = no
 BACKLIGHT_ENABLE = no
