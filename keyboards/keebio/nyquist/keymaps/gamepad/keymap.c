@@ -11,11 +11,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_ENTER,  KC_BSPC,  KC_LCTRL,  KC_LALT,  GUI_T(KC_SPC),  MO(1),  XX,  XX,  XX,  XX,  XX,  XX
 			),
 	[1] = LAYOUT(
-			RESET,    KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,    XX,  XX,  XX,  XX,  XX,  XX,
-			EEP_RST,  KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,    XX,  XX,  XX,  XX,  XX,  XX,
-			KC_VOLU,  RGB_HUI,  RGB_SAI,  RGB_VAI,  RGB_MOD,   RGB_TOG,  XX,  XX,  XX,  XX,  XX,  XX,
-			KC_MUTE,  RGB_HUD,  RGB_SAD,  RGB_VAD,  RGB_RMOD,  KC_NO,    XX,  XX,  XX,  XX,  XX,  XX,
-			KC_VOLD,  KC_NO,    KC_NO,    KC_NO,    KC_NO,     KC_NO,    XX,  XX,  XX,  XX,  XX,  XX
+			_______,  KC_NLCK,  KC_PSLS,  KC_PAST,  KC_PMNS,  RGB_MOD,   XX,  XX,  XX,  XX,  XX,  XX,
+			_______,  KC_P7,    KC_P8,    KC_P9,    KC_PPLS,  RGB_TOG,   XX,  XX,  XX,  XX,  XX,  XX,
+			_______,  KC_P4,    KC_P5,    KC_P6,    KC_PPLS,  RGB_RMOD,  XX,  XX,  XX,  XX,  XX,  XX,
+			_______,  KC_P1,    KC_P2,    KC_P3,    KC_PENT,  RESET,     XX,  XX,  XX,  XX,  XX,  XX,
+			_______,  _______,  KC_P0,    KC_PDOT,  KC_PENT,  _______,   XX,  XX,  XX,  XX,  XX,  XX
 			),
 };
 
