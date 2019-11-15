@@ -9,7 +9,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_TAB,   KC_QUOT,  KC_COMM,  KC_DOT,       KC_P,         KC_Y,              KC_BSPC,
 			KC_ESC,   KC_A,     KC_O,     LT(1, KC_E),  LT(3, KC_U),  KC_I,              KC_LSFT,
 			KC_SCLN,  KC_Q,     KC_J,     KC_K,         KC_X,         LCTL_T(KC_ENTER),
-			KC_CAPS,  KC_NO,    KC_NO,    KC_LALT,      KC_LCTL,
+			KC_CAPS,  KC_NO,    KC_NO,    KC_LCTL,      KC_LALT,
 			
 			LALT_T(KC_PGUP), // top-left
 			KC_NO, // top-right
@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_DEL,            KC_F,         KC_G,     KC_C,     KC_R,     KC_L,     KC_BSLS,
 			KC_D,              LT(2, KC_H),  KC_T,     KC_N,     KC_S,     KC_MINS,
 			RCTL_T(KC_ENTER),  KC_B,         KC_M,     KC_W,     KC_V,     KC_Z,     KC_RSFT,
-			KC_RCTL,           KC_RALT,      KC_LBRC,  KC_RBRC,  KC_SLSH,
+			KC_RALT,           KC_RCTL,      KC_LBRC,  KC_RBRC,  KC_SLSH,
 			
 			KC_NO, // top-left
 			RALT_T(KC_PGDN), // top-right
