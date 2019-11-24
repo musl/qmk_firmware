@@ -14,3 +14,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "chiron.h"
+#include "outputselect.h"
+
+void matrix_init_kb() {
+	set_output(OUTPUT_AUTO);
+}
+
+void keyboard_post_init_user(void) {
+	debug_enable = true;
+	debug_matrix = true;
+	debug_keyboard = true;
+}

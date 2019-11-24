@@ -29,17 +29,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 7
 
-// Pro Micro Pins          4,  6,  7,  8,  9
-#define MATRIX_ROW_PINS { D4, D7, E6, B4, B5 }
-// Pro Micro Pins         A3, A2, A1, A0, 15, 14, 16
-#define MATRIX_COL_PINS { F4, F5, F6, F7, B1, B3, B2 }
+#define MATRIX_ROW_PINS { C6, D7, B5, B6, B7 }
+#define MATRIX_COL_PINS { F6, F5, F4, F1, F0, C7, D6 }
 
 #define UNUSED_PINS
 
-// Pro Micro Pins      RX1
-#define SPLIT_HAND_PIN D2
+#define SPLIT_HAND_PIN F7
 
-// Pro Micro Pins       RX1
 #define SOFT_SERIAL_PIN D0
 
 #define DIODE_DIRECTION COL2ROW
@@ -49,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
 
-#define RGB_DI_PIN D3
+#define RGB_DI_PIN D1
 #define RGBLED_NUM 4
 
 #define BACKLIGHT_PIN B6
