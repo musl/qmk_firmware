@@ -45,7 +45,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
 
-#define RGB_DI_PIN D1
+#define RGB_DI_PIN D3
 #define RGBLED_NUM 4
 
 #define BACKLIGHT_PIN B6
