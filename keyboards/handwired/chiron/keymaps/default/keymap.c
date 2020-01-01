@@ -15,6 +15,21 @@
  */
 #include QMK_KEYBOARD_H
 
+// Since one half has bluetooth enabled and the other cannot, we need to
+// define some key codes that may be missing so we don't have to
+// maintain two keymaps.
+#ifndef OUT_AUTO
+	#define OUT_AUTO KC_NO
+#endif
+
+#ifndef OUT_BT
+	#define OUT_BT KC_NO
+#endif
+
+#ifndef OUT_USB
+	#define OUT_USB KC_NO
+#endif
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[0] = LAYOUT(
 			KC_GRV,   KC_1,     KC_2,     KC_3,        KC_4,        KC_5,            KC_HOME,         KC_END,          KC_6,            KC_7,        KC_8,        KC_9,       KC_0,     KC_EQL,
