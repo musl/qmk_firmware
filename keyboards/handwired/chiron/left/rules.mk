@@ -1,7 +1,6 @@
 # MCU name
 MCU = atmega32u4
 F_CPU = 8000000
-# ARCH = AVR8
 BOOTLOADER = caterina
 SPLIT_KEYBOARD = yes
 
