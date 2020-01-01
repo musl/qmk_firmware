@@ -35,3 +35,5 @@ TAP_DANCE_ENABLE = no
 UCIS_ENABLE = no
 UNICODEMAP_ENABLE = no
 UNICODE_ENABLE = no
+
+DEFAULT_FOLDER = handwired/chiron/left
