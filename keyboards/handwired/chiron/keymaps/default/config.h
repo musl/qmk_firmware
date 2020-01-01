@@ -16,13 +16,10 @@
 
 #pragma once
 
-#define USE_SERIAL
 #define MASTER_RIGHT
-//#define MASTER_LEFT
 
 #define IGNORE_MOD_TAP_INTERRUPT
 #define PERMISSIVE_HOLD
-
 #define TAPPING_TERM 200
 
 #define MOUSEKEY_DELAY             20
@@ -31,22 +28,4 @@
 #define MOUSEKEY_TIME_TO_MAX       30
 #define MOUSEKEY_WHEEL_MAX_SPEED   8
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 40
-
-#undef  RGBLED_NUM
-#define RGBLED_NUM 2
-#define RGBLED_SPLIT {1, 1}
-
-// Don't turn off lights when the host goes to sleep.
-#undef RGBLIGHT_SLEEP
-
-#define RGBLIGHT_HUE_STEP 8
-#define RGBLIGHT_SAT_STEP 8
-#define RGBLIGHT_VAL_STEP 8
-
-// Selectively enable animations to save on code size.
-#undef  RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 
