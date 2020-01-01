@@ -28,26 +28,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MATRIX_ROWS 10
 #define MATRIX_COLS 7
-
 #define MATRIX_ROW_PINS { C6, D7, B5, B6, B7 }
 #define MATRIX_COL_PINS { F6, F5, F4, F1, F0, C7, D6 }
 
+#define USE_I2C
+#define SPLIT_HAND_PIN F7
 #define UNUSED_PINS
 
-#define SPLIT_HAND_PIN F7
-
-#define USE_I2C
-
-#define DIODE_DIRECTION COL2ROW
-
 #define DEBOUNCE 5
-
+#define DIODE_DIRECTION COL2ROW
 #define LOCKING_SUPPORT_ENABLE
 #define LOCKING_RESYNC_ENABLE
-
-#define RGB_DI_PIN D3
-#define RGBLED_NUM 4
-
-#define BACKLIGHT_PIN D2
-#define BACKLIGHT_LEVELS 7
 
