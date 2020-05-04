@@ -24,6 +24,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_RIGHT
 // #define EE_HANDS
 
+/******************************************************************************/
+// Key Behavior
+/******************************************************************************/
+
+/*
+ * If you press a Mod Tap key, tap another key (press and release) and
+ * then release the Mod Tap key, all within the tapping term, it will
+ * output the "tapping" function for both keys.
+ *
+ * Setting IGNORE_MOD_TAP_INTERRUPT requires holding both keys for the
+ * TAPPING_TERM to trigger the hold function (the mod).
+ */
+#define IGNORE_MOD_TAP_INTERRUPT
+
+//#define LEADER_TIMEOUT 300
+//#define ONESHOT_TAP_TOGGLE 2
+//#define ONESHOT_TIMEOUT 300
+
+/*
+ * If you press a Mod Tap key, tap another key (press and release) and
+ * then release the Mod Tap key, all within the tapping term, it will
+ * output the "tapping" function for both keys.
+ */
+#define PERMISSIVE_HOLD
+
+#define PREVENT_STUCK_MODIFIERS
+
+//#define QMK_KEYS_PER_SCAN 4
+
+// Send the tap keystroke even if it's outside of the tapping term and
+// no other key was pressed.
+//#define RETRO_TAPPING
+
+#define TAPPING_TERM 200
+//#define TAPPING_TOGGLE 2
+
+
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 3
