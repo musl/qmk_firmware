@@ -94,10 +94,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Selectively enable animations to save on code size.
 #undef  RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_BREATHING
-#define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+//#define RGBLIGHT_EFFECT_BREATHING
+//#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+//#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 #define RGBLIGHT_EFFECT_TWINKLE
 
 /******************************************************************************/
