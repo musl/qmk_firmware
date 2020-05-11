@@ -79,8 +79,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /******************************************************************************/
 
 #undef  RGBLED_NUM
-#define RGBLED_NUM 2
-#define RGBLED_SPLIT {1, 1}
+#define RGBLED_NUM 16
+#define RGBLED_SPLIT {8, 8}
+
+// Reverse the right hand side so the colors match up.
+#define RGBLIGHT_LED_MAP { 0, 1, 2, 3, 4, 5, 6, 7, 15, 14, 13, 12, 11, 10, 9, 8 }
 
 // Don't turn off lights when the host goes to sleep.
 #undef RGBLIGHT_SLEEP
@@ -95,6 +98,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_EFFECT_BREATHING
 #define RGBLIGHT_EFFECT_RAINBOW_MOOD
 #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define RGBLIGHT_EFFECT_TWINKLE
 
 /******************************************************************************/
 #endif
