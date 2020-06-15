@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 			KC_TAB,   KC_QUOT,  KC_COMM,     KC_DOT,      KC_P,        KC_Y,            KC_BSPC,         KC_DEL,          KC_F,            KC_G,        KC_C,        KC_R,        KC_L,     KC_BSLS,
 			KC_ESC,   KC_A,     LT(3,KC_O),  LT(2,KC_E),  LT(1,KC_U),  KC_I,            LCTL_T(KC_ENT),  RCTL_T(KC_ENT),  KC_D,            LT(4,KC_H),  LT(5,KC_T),  LT(6,KC_N),  KC_S,     KC_MINS,
 			KC_LSFT,  KC_SCLN,  KC_Q,        KC_J,        KC_K,        KC_X,            KC_PGUP,         KC_PGDN,         KC_B,            KC_M,        KC_W,        KC_V,        KC_Z,     KC_RSFT,
-			KC_CAPS,  KC_INS,   KC_LCTRL,    XXXXXXX,     KC_LALT,     RGUI_T(KC_SPC),  KC_HYPR,         KC_HYPR,         RGUI_T(KC_SPC),  KC_RALT,     XXXXXXX,     KC_LBRC,     KC_RBRC,  KC_SLSH
+			KC_CAPS,  KC_INS,   KC_LCTRL,    XXXXXXX,     KC_LALT,     RGUI_T(KC_SPC),  KC_MEH,          KC_MEH,          RGUI_T(KC_SPC),  KC_RALT,     XXXXXXX,     KC_LBRC,     KC_RBRC,  KC_SLSH
 			),
 	[1] = LAYOUT(
 			XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_PGUP,  XXXXXXX,  XXXXXXX,  XXXXXXX,
